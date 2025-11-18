@@ -1,0 +1,34 @@
+# IDE files
+.idea/
+*.iml
+.vscode/
+*.swp
+*.swo
+*~
+
+# Maven build output
+target/
+
+# JDBC drivers (downloaded via Maven dependencies)
+jdbc-drivers/
+
+# Frontend build artifacts and dependencies
+src/main/ui/node_modules/
+src/main/ui/dist/
+src/main/ui/node/
+src/main/ui/.vite/
+
+# Optional: Remove comment below to include package-lock.json for reproducible builds
+# src/main/ui/package-lock.json
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+*.tmp
+*.bak

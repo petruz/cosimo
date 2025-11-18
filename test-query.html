@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Query Debug</title>
+</head>
+<body>
+    <h1>Test Query Execution</h1>
+    <button onclick="testQuery()">Execute Test Query</button>
+    <pre id="output"></pre>
+
+    <script>
+        async function testQuery() {
+            const output = document.getElementById('output');
+            output.textContent = 'Executing query...';
+
+            try {
+                const response = await fetch('http://localhost:8080/api/v1/query/execute', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        sql: 'SELECT 1 as test_column'
+                    })
+                });
+
+                const data = await response.json();
+
+                output.textContent = JSON.stringify(data, null, 2);
+
+                console.log('Response data:', data);
+                console.log('data.success:', data.success);
+                console.log('data.data:', data.data);
+                console.log('data.data.columns:', data.data.columns);
+                console.log('data.data.rows:', data.data.rows);
+
+            } catch (error) {
+                output.textContent = 'Error: ' + error.message;
+                console.error('Error:', error);
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<connections>
+                                
+    
+    
+    
+    
+    
+    
+    <!-- Saved database connections will be stored here -->
+                            
+    
+    
+    
+        
+    
+
+
+
+    
+
+
+    <connection id="11ea8747-df81-44db-884e-d439d665a68a" name="postgres">
+        <type>postgres</type>
+        <host>localhost</host>
+        <port>5432</port>
+        <database>postgres</database>
+        <username>postgres</username>
+        <password>postgres</password>
+    </connection>
+</connections>

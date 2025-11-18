@@ -1,0 +1,191 @@
+[data-theme="earth"] {
+  /* Primary Colors */
+  --primary-bg: #714329;           /* Chocolate Brown - AppBar (ex blue) */
+  --secondary-bg: #B08463;         /* Bronze - secondary panels */
+  --tertiary-bg: #D0B9A7;          /* Light Sand - light accents */
+  --accent-warm: #B9937B;          /* Warm Beige - warm highlights */
+  --accent-soft: #B5A192;          /* Warm Gray - soft highlights */
+
+  /* Text Colors */
+  --text-primary: #2c2c2c;         /* Dark text on light backgrounds */
+  --text-secondary: #f5f5f5;       /* Light text on dark backgrounds */
+  --text-muted: #6d5d4f;           /* Muted text */
+
+  /* UI Components */
+  --appbar-bg: #714329;            /* Blue default → #714329 */
+  --appbar-text: #f5f5f5;
+  --sidebar-bg: #f5f5f5;           /* Keep sidebar light */
+  --sidebar-text: #2c2c2c;
+  --editor-bg: #B08463;            /* Query box black → #B08463 */
+  --editor-text: #2c2c2c;
+  --results-bg: #D0B9A7;           /* White background → #D0B9A7 */
+  --results-text: #2c2c2c;
+
+  /* Table specific colors */
+  --table-header-bg: #B9937B;      /* Table header */
+  --table-row-odd: #B5A192;        /* Odd rows */
+  --table-row-even: #c9b9a9;       /* Even rows (lighter than #B5A192) */
+
+  /* Interactive Elements */
+  --button-primary: #714329;
+  --button-primary-hover: #5d3621;
+  --button-secondary: #B9937B;
+  --button-text: #f5f5f5;
+
+  /* Borders & Dividers */
+  --border-color: #B08463;
+  --divider-color: rgba(113, 67, 41, 0.2);
+
+  /* Status Colors */
+  --success: #6b9b6b;
+  --warning: #d4a574;
+  --error: #c97777;
+  --info: #8aa8c4;
+}
+
+/* ============================================
+   WARM EARTH THEME ONLY
+   ============================================ */
+[data-theme="earth"] {
+  /* Primary Colors */
+  --primary-bg: #714329;           /* Chocolate Brown - AppBar (ex blue) */
+  --secondary-bg: #B08463;         /* Bronze - secondary panels */
+  --tertiary-bg: #D0B9A7;          /* Light Sand - light accents */
+  --accent-warm: #B9937B;          /* Warm Beige - warm highlights */
+  --accent-soft: #B5A192;          /* Warm Gray - soft highlights */
+
+  /* Text Colors */
+  --text-primary: #2c2c2c;         /* Dark text on light backgrounds */
+  --text-secondary: #f5f5f5;       /* Light text on dark backgrounds */
+  --text-muted: #6d5d4f;           /* Muted text */
+
+  /* UI Components */
+  --appbar-bg: #714329;            /* Blue default → #714329 */
+  --appbar-text: #f5f5f5;
+  --sidebar-bg: #f5f5f5;           /* Keep sidebar light */
+  --sidebar-text: #2c2c2c;
+  --editor-bg: #B08463;            /* Query box black → #B08463 */
+  --editor-text: #2c2c2c;
+  --results-bg: #D0B9A7;           /* White background → #D0B9A7 */
+  --results-text: #2c2c2c;
+
+  /* Table specific colors */
+  --table-header-bg: #B9937B;      /* Table header */
+  --table-row-odd: #B5A192;        /* Odd rows */
+  --table-row-even: #c9b9a9;       /* Even rows (lighter than #B5A192) */
+
+  /* Interactive Elements */
+  --button-primary: #714329;
+  --button-primary-hover: #5d3621;
+  --button-secondary: #B9937B;
+  --button-text: #f5f5f5;
+
+  /* Borders & Dividers */
+  --border-color: #B08463;
+  --divider-color: rgba(113, 67, 41, 0.2);
+
+  /* Status Colors */
+  --success: #6b9b6b;
+  --warning: #d4a574;
+  --error: #c97777;
+  --info: #8aa8c4;
+}
+
+/* App Bar */
+.MuiAppBar-root {
+  background-color: var(--appbar-bg) !important;
+  color: var(--appbar-text) !important;
+}
+
+/* Paper/Panels */
+.MuiPaper-root {
+  background-color: var(--sidebar-bg) !important;
+  color: var(--sidebar-text) !important;
+}
+
+/* Buttons */
+.MuiButton-contained {
+  background-color: var(--button-primary) !important;
+  color: var(--button-text) !important;
+}
+
+.MuiButton-contained:hover {
+  background-color: var(--button-primary-hover) !important;
+}
+
+/* Borders */
+.MuiDivider-root {
+  border-color: var(--divider-color) !important;
+}
+
+/* Save Icon (when modified) */
+.MuiIconButton-root[title*="Save"] {
+  color: var(--accent-warm) !important;
+}
+
+/* Results Table - Header */
+[data-theme="earth"] .MuiDataGrid-columnHeaders,
+[data-theme="earth"] .MuiTableHead-root {
+  background-color: var(--table-header-bg) !important;
+  color: #2c2c2c !important;
+}
+
+/* Results Table - Odd Rows */
+[data-theme="earth"] .MuiDataGrid-row:nth-of-type(odd),
+[data-theme="earth"] .MuiTableRow-root:nth-of-type(odd) {
+  background-color: var(--table-row-odd) !important;
+}
+
+/* Results Table - Even Rows */
+[data-theme="earth"] .MuiDataGrid-row:nth-of-type(even),
+[data-theme="earth"] .MuiTableRow-root:nth-of-type(even) {
+  background-color: var(--table-row-even) !important;
+}
+
+/* Query Editor Box */
+[data-theme="earth"] .monaco-editor,
+[data-theme="earth"] .monaco-editor .margin,
+[data-theme="earth"] .monaco-editor-background {
+  background-color: var(--editor-bg) !important;
+}
+
+/* AG-Grid Background and Text */
+[data-theme="earth"] .ag-theme-quartz {
+  --ag-background-color: var(--results-bg);
+  --ag-foreground-color: var(--results-text);
+  --ag-border-color: var(--border-color);
+}
+
+/* AG-Grid Header */
+[data-theme="earth"] .ag-theme-quartz .ag-header {
+  background-color: var(--table-header-bg) !important;
+  color: var(--text-primary) !important;
+  border-bottom: 2px solid var(--border-color);
+}
+
+[data-theme="earth"] .ag-theme-quartz .ag-header-cell {
+  background-color: var(--table-header-bg) !important;
+  color: var(--text-primary) !important;
+  font-weight: 600;
+}
+
+/* AG-Grid Rows - Alternating colors */
+[data-theme="earth"] .ag-theme-quartz .ag-row-odd {
+  background-color: var(--table-row-odd) !important;
+}
+
+[data-theme="earth"] .ag-theme-quartz .ag-row-even {
+  background-color: var(--table-row-even) !important;
+}
+
+/* AG-Grid Row Hover */
+[data-theme="earth"] .ag-theme-quartz .ag-row-hover {
+  background-color: var(--accent-warm) !important;
+  opacity: 0.7;
+}
+
+/* AG-Grid Selected Row */
+[data-theme="earth"] .ag-theme-quartz .ag-row-selected {
+  background-color: var(--accent-warm) !important;
+  opacity: 0.5;
+}
